@@ -1,0 +1,162 @@
+@font-face {
+    font-family: "nunito";
+    src: url("../fonts/Nunito-VariableFont_wght.ttf");
+}
+
+
+body {
+    width: 100%;
+    font-family: "nunito";
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ a{
+    text-decoration: none;
+    color: black;
+ }
+
+#container {
+    background-color: #F0DBBA;
+    color:black;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 200px auto auto 200px;
+    grid-template-areas: 
+     "header"
+     "texto"
+     "imagen"
+     "footer";
+    }
+
+header {
+grid-area: header;
+display: grid;
+background-color: white;
+grid-template-columns: 50% 50%;
+grid-template-rows: 1fr 1fr;
+grid-template-areas: 
+     "logo logo"
+     "nav1 nav2";
+     justify-items: center;
+     align-items: center;
+
+}
+
+header img{
+    width: 100px;
+    grid-area: logo;
+
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+nav a{
+    text-decoration: none;
+    color: #C75872;
+}
+
+#nav1{
+    grid-area: nav1;
+}
+
+#nav2 {
+    grid-area: nav2;
+}
+
+nav a:hover {
+   color: #664E24;
+
+}
+
+article{
+    grid-area: texto;
+    margin: 5%;
+    text-align: center;
+    justify-content: center;
+    color: #45484a;
+}
+
+article p{
+  padding-top: 30px;
+margin: 10%;
+}
+
+aside{
+    grid-area: imagen;
+}
+
+aside img {
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+
+}
+
+footer{
+    background-color: white;
+    grid-area: footer;
+    text-align: center;
+    text-transform:  uppercase;
+    padding-top: 30px;
+}
+
+footer img{
+    width: 80px;
+
+}
+
+footer li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px;
+}
+
+.footer-icons a{
+    background-color: #C75872;
+    color: #F0DBBA;
+    padding: 15px;
+    border-radius: 100px;
+    display: flex;
+    font-size: 25px;
+}
+
+.footer-icons a:hover{
+color: white;
+}
+
+.footer-menu a:hover{
+color: #C75872; 
+}
+
+header{
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+     "nav1 logo nav2";
+     justify-items: center;
+     align-items: center;
+}
+
+footer{
+    flex-direction: row;
+}
+
+@media  (min-width:700px){
+    #container {
+    grid-template-columns: 50% 50%;
+     grid-template-rows: 200px auto 200px;
+     grid-template-areas: 
+      "header header"
+      "texto imagen"
+      "footer footer";
+ }
+ }
+ 
