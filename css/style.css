@@ -452,3 +452,65 @@ background: white;
         text-align: left;
     }
 }
+
+.wrapper{
+  max-width: 75%;
+  margin: auto;
+}
+
+.wrapper > p,
+.wrapper > h1 {
+margin: 1.5rem 0;
+text-align: center;  
+}
+
+.wrapper > h1 {
+  letter-spacing: 3px;
+}
+
+.accordion {
+  background-color: white;
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  font-size: 1.2rem;
+  width: 100%;
+  padding: 1rem 2.5rem;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.accordion i {
+  font-size: 1.6rem;
+}
+
+.active, .accordion:hover{
+  background-color:#E4D4D2;
+}
+
+.pannel {
+  padding: 0 2rem 2.5rem 2rem;
+  background-color: white;
+  overflow: hidden;
+  background-color: #E4D4D2;
+}
+
+.pannel p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+
+}
+
+.faq {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+}
+
+.faq .active {
+  border: none;
+}
